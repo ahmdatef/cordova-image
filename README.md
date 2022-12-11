@@ -24,7 +24,7 @@ Based on top of:
 
 To build any your own custom Cordova Image using your customized versions
 ```
-docker build -t ahmdatef/cordova github.com/ahmdatef/cordova-image \
+docker build -t ahmdatef/cordova github.com/ahmdatef/cordova-image#main \
     --build-arg ANDROID_VERSION=${YOUR_ANDROID_VERSION} \
     --build-arg JAVA_VERSION=${YOUR_JAVA_VERSION} \
     --build-arg GRADLE_VERSION=${YOUR_GRADLE_VERSION} \
