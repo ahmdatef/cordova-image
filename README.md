@@ -19,6 +19,7 @@ Based on top of:
 | NODE_VERSION       | 12.22.1      | All available `node` versions provided by [nvm](https://github.com/nvm-sh/nvm) |
 | CORDOVA_VERSION    | 11.0.0       | All available `cordova` versions |
 | EXTRA_BUILD_TOOLS_VERSION | None | All available `build-tools` versions for the selected `ANDROID_VERSION` |
+| EXTRA_PLATFORMS_VERSION | None | All available `platforms` versions for the selected `ANDROID_VERSION` |
 
 ## Command
 
@@ -31,4 +32,5 @@ docker build -t ahmdatef/cordova github.com/ahmdatef/cordova-image#main \
     --build-arg NODE_VERSION=${YOUR_NODE_VERSION} \
     --build-arg CORDOVA_VERSION=${YOUR_CORDOVA_VERSION}
     --build-arg EXTRA_BUILD_TOOLS_VERSION=${YOUR_EXTRA_BUILD_TOOLS_VERSION}
+    --build-arg EXTRA_PLATFORMS_VERSION=${YOUR_EXTRA_PLATFORMS_VERSION}
 ```
