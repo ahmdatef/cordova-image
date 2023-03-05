@@ -50,4 +50,11 @@ ENV PATH $GRADLE_HOME/bin:$PATH
 ARG EXTRA_BUILD_TOOLS_VERSION
 RUN if [ ! -z "${EXTRA_BUILD_TOOLS_VERSION}" ]; then sdkmanager "build-tools;${EXTRA_BUILD_TOOLS_VERSION}"; fi;
 
+
+# install extra build-tools version
+ARG EXTRA_PLATFORMS_VERSION
+RUN if [ ! -z "${EXTRA_PLATFORMS_VERSION}" ]; then sdkmanager "platforms;${EXTRA_PLATFORMS_VERSION}"; fi;
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+WORKDIR /app
